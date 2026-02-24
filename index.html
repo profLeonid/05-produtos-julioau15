@@ -12,12 +12,26 @@
 
     <h1 class="text-[40px] text-center p-3">Lista de produtos</h1>
 
-    <main class="bg-blue-500 w-[500px] h-[400px] p-[30px] flex flex-col items-center gap-[20px] rounded-[10px]">
+    <main class="bg-blue-500 w-[500px] min-h-[500px] p-[30px] flex flex-col items-center gap-[20px] rounded-[10px]">
+
+        <input
+        id="input-codigo"
+        type="text"
+        placeholder="código"
+        class="bg-gray-200 px-2 py-1 border-2 rounded-[5px]"
+        >
 
         <input
         id="input-produto"
         type="text"
-        placeholder="produto"
+        placeholder="Produto"
+        class="bg-gray-200 px-2 py-1 border-2 rounded-[5px]"
+        >
+
+        <input
+        id="input-quant"
+        type="text"
+        placeholder="Quantidade"
         class="bg-gray-200 px-2 py-1 border-2 rounded-[5px]"
         >
 
@@ -29,11 +43,16 @@
         Adicionar
         </button>
 
-        <div
+        <table
         id="produtos-container"
-        class="w-[80%] h-[60%] bg-gray-200 border-2 rounded-[5px] p-2 flex flex-col items-center"
+        class="w-[80%] h-[60%] bg-gray-200 border-2 rounded-[5px] p-2 flex flex-col items-stretch "
         >
-        </div>
+          <tr class="flex justify-around border-be-2 p-1">
+            <th>Código</th>
+            <th>Produto</th>
+            <th>Quantidade</th>
+          </tr>
+        </table>
 
         <button
         id="btn-limpar"

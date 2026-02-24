@@ -10,18 +10,7 @@ function adicionarProduto(){
         alert('erro');
         inputCodigo.focus()
     }else{
-        let textProduto = document.createElement('th')
-        let textCodigo = document.createElement('th')
-        let textQuant = document.createElement('th')
-        textProduto.textContent = inputProduto.value
-        textCodigo.textContent = inputCodigo.value
-        textQuant.textContent = inputQuant.value
-        
-        let tr = document.createElement('tr')
-        tr.className = 'flex justify-around border-be-2 p-1'
-        tr.appendChild(textCodigo)
-        tr.appendChild(textProduto)
-        tr.appendChild(textQuant)
+        escreverTabela(inputCodigo.value ,inputProduto.value,inputQuant.value, produtosContainer)
 
         produtosContainer.appendChild(tr)
         inputProduto.value = ''
@@ -34,20 +23,25 @@ function adicionarProduto(){
 function limparLista(){
     const produtosContainer = document.getElementById('produtos-container')
     produtosContainer.innerText = ''
+
+    escreverTabela('codigo','produto','quantidade', produtosContainer)
+    
+    inputCodigo.focus()
+}
+
+function escreverTabela(codigo, produto, quantidade, container){
     let textProduto = document.createElement('th')
     let textCodigo = document.createElement('th')
     let textQuant = document.createElement('th')
-    textProduto.textContent = 'Produto'
-    textCodigo.textContent = 'Código'
-    textQuant.textContent = 'Quantidade'
+
+    textProduto.textContent = produto
+    textCodigo.textContent = codigo
+    textQuant.textContent = quantidade
+
     let tr = document.createElement('tr')
-    tr.className = 'flex justify-around border-be-2 p-1'
+    tr.className = 'flex justify-between border-be-2 p-1'
     tr.appendChild(textCodigo)
     tr.appendChild(textProduto)
     tr.appendChild(textQuant)
-    produtosContainer.appendChild(tr)
-
-
-    
-    inputCodigo.focus()
+    container.appendChild(tr)
 }

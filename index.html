@@ -34,33 +34,41 @@
         placeholder="Quantidade"
         class="bg-gray-200 px-2 py-1 border-2 rounded-[5px]"
         >
+        <div>
+            <button
+            id="btn-adicionar"
+            onclick="adicionarProduto()"
+            class="bg-white px-3 py-1 border-2 hover:bg-gray-300 rounded-[5px]"
+            >
+            Adicionar
+            </button>
 
-        <button
-        id="btn-adicionar"
-        onclick="adicionarProduto()"
-        class="bg-white px-3 py-1 border-2 hover:bg-gray-300 rounded-[5px]"
-        >
-        Adicionar
-        </button>
+            <button
+            id="btn-limpar"
+            onclick="limparLista()"
+            class="bg-white px-5 py-1 border-2 hover:bg-gray-300 rounded-[5px]"
+            >
+            limpar 
+            </button>
+
+
+        </div>
+        
 
         <table
         id="produtos-container"
         class="w-[80%] h-[60%] bg-gray-200 border-2 rounded-[5px] p-2 flex flex-col items-stretch "
         >
-          <tr class="flex justify-around border-be-2 p-1">
+          <tr class="flex justify-between border-be-2 p-1">
             <th>Código</th>
             <th>Produto</th>
             <th>Quantidade</th>
           </tr>
         </table>
 
-        <button
-        id="btn-limpar"
-        onclick="limparLista()"
-        class="bg-white px-5 py-1 border-2 hover:bg-gray-300 rounded-[5px]"
-        >
-        limpar 
-        </button>
+        
+        
+        
     </main>
     
 </body>

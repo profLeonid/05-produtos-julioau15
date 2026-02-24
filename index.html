@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./app.js"></script>
+    <title>Produtos</title>
+</head>
+<body class="bg-blue-300 flex flex-col items-center justify-center h-[70vh]">
+
+    <h1 class="text-[40px] text-center p-3">Lista de produtos</h1>
+
+    <main class="bg-blue-500 w-[500px] h-[400px] p-[30px] flex flex-col items-center gap-[20px] rounded-[10px]">
+
+        <input
+        id="input-produto"
+        type="text"
+        placeholder="produto"
+        class="bg-gray-200 px-2 py-1 border-2 rounded-[5px]"
+        >
+
+        <button
+        id="btn-adicionar"
+        onclick="adicionarProduto()"
+        class="bg-white px-3 py-1 border-2 hover:bg-gray-300 rounded-[5px]"
+        >
+        Adicionar
+        </button>
+
+        <div
+        id="produtos-container"
+        class="w-[80%] h-[60%] bg-gray-200 border-2 rounded-[5px] p-2 flex flex-col items-center"
+        >
+        </div>
+
+        <button
+        id="btn-limpar"
+        onclick="limparLista()"
+        class="bg-white px-5 py-1 border-2 hover:bg-gray-300 rounded-[5px]"
+        >
+        limpar 
+        </button>
+    </main>
+    
+</body>
+</html>
